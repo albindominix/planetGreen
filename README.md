@@ -38,8 +38,8 @@ Before running this project, make sure you have:
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repository-url>
-cd react-auth-dashboard
+git clone https://github.com/albindominix/planetGreen.git
+cd planetGreen
 ```
 
 ### 2. Install Dependencies
