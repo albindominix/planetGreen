@@ -242,4 +242,3 @@ For issues and questions:
 2. Review the code comments and documentation
 3. Create an issue in the repository
 
-**Built with ❤️ using React and modern web technologies**
