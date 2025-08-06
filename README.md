@@ -52,14 +52,25 @@ yarn install
 
 ### 3. Environment Configuration
 
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory and add your PocketBase URL:
 
 ```env
-VITE_POCKETBASE_URL=http://localhost:8090
+VITE_POCKETBASE_URL=your-pocketbase-url-here
 ```
+
+**Example:**
+```env
+VITE_POCKETBASE_URL=https://pb.devpgs.app
+```
+
+> **Note**: Replace `your-pocketbase-url-here` with your actual PocketBase server URL. This could be a local development server (`http://localhost:8090`) or a hosted instance.
 
 ### 4. PocketBase Setup
 
+**Option A: Use Existing Hosted Instance**
+If you have access to a hosted PocketBase instance (like `https://pb.devpgs.app`), simply configure your `.env` file with the URL and ensure the `users` collection exists with the required fields.
+
+**Option B: Set Up Local PocketBase**
 1. Download PocketBase from [https://pocketbase.io/](https://pocketbase.io/)
 2. Extract and run PocketBase:
    ```bash
@@ -71,6 +82,13 @@ VITE_POCKETBASE_URL=http://localhost:8090
    - `password` (Password field, required)
    - `name` (Text field, required)
    - `username` (Text field, required, unique)
+
+**Required Collection Schema:**
+Regardless of which option you choose, ensure your PocketBase instance has a `users` collection with these fields:
+- `email` (Email field, required)
+- `password` (Password field, required)  
+- `name` (Text field, required)
+- `username` (Text field, required, unique)
 
 ### 5. Run the Development Server
 
@@ -190,9 +208,9 @@ npm run lint
 
 ## Environment Variables
 
-| Variable | Description | Default |
-|----------|-------------|---------|
-| `VITE_POCKETBASE_URL` | PocketBase server URL | `http://localhost:8090` |
+| Variable | Description | Default | Example |
+|----------|-------------|---------|---------|
+| `VITE_POCKETBASE_URL` | Your PocketBase server URL | None (Required) | `https://pb.devpgs.app` or `http://localhost:8090` |
 
 ## Contributing
 
