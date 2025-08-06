@@ -23,10 +23,9 @@ const RegisterPage = () => {
       email: "",
       password: "",
       passwordConfirm: "",
-      acceptTerms: false, // <-- State is now managed by the form
+      acceptTerms: false, 
     },
     onSubmit: async ({ value }) => {
-      // The form's own validation now prevents submission if terms aren't accepted.
       await registerMutation.mutateAsync(value);
     },
   });

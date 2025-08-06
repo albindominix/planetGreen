@@ -27,7 +27,7 @@ const AppRoutes = () => {
             replace
           />
         }
-      />
+      />O
 
       {/* Public routes - redirect to dashboard if already authenticated */}
       <Route
